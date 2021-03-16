@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
+:root {
+    /* https://www.htmlcsscolor.com/hex/2E71CC */
+    --web-neutral: #f0f2f5;
+    --web-gray: #878787;
+    --web-brand: #2E71CC;
+    --web-success: #2ECC71;
+    --web-danger: #CC2E71;
+    --web-info: #CC712E;
+    --web-royal: #712ECC;
+}
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -18,6 +30,10 @@ body {
     line-height: 1.6;
 }
 
+img {
+    width: 100%;
+}
+
 .wrapper {
     display: flex;
     align-items: center;
@@ -33,9 +49,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-left: .5rem solid #2ecc71;
+    border-left: .5rem solid var(--web-success);
     /*box-shadow: .1rem .7rem 1.4rem -.5rem rgba(0,0,0,0.16);*/
     box-shadow:  0 1px 2px rgba(0,0,0,0.2);;
+}
+
+.wrapper .toast.offline {
+    border-color: #ccc;
 }
 
 .toast .content {
@@ -45,7 +65,7 @@ body {
 
 .toast .content .icon {
     font-size: 2.5rem;
-    background: #2ecc71;
+    background: var(--web-success);
     height: 5rem;
     width: 5rem;
     display: flex;
@@ -53,6 +73,10 @@ body {
     justify-content: center;
     border-radius: 50%;
     color: white;
+}
+
+.toast.offline .content .icon {
+    background: #ccc;
 }
 
 .toast .content .details {
