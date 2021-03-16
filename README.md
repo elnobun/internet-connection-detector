@@ -1,5 +1,5 @@
 # Description
-A Toast Notification that detects your internet notification, and lets you know when you are offline, and back online.
+A Toast Notification that detects your internet status, and notifies you know when you are offline, and back online.
 
 ## Tools
 - [x] HTML
